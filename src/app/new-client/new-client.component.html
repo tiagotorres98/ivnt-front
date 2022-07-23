@@ -1,0 +1,47 @@
+<form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+    <div class="card">
+        <div class="card-header">
+            Dados Básicos
+        </div>
+        <div class="card-body">
+            <input type="text" required class="form-control" aria-describedby="clientName"
+                placeholder="Nome do Cliente *" formControlName="name" />
+            <input type="text" class="form-control" mask="000.000.000-00" aria-describedby="clientsCPF"
+                placeholder="CPF " formControlName="cpf" />
+            <input type="text" required class="form-control" mask="(00) 00000-0000" aria-describedby="clientsPhone"
+                placeholder="Número do Cliente *" formControlName="phone" />
+            <input type="text" class="form-control" mask="(00) 00000-0000" aria-describedby="clientsPhone2"
+                placeholder="Número de Recado" formControlName="phone2" />
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            Dados de Endereço
+        </div>
+        <div class="card-body">
+            
+            <input type="text" class="form-control" mask="00000-000" (change)="buscaCEP()" aria-describedby="clientsPostalCode"
+                placeholder="CEP *" required formControlName="postalCode" />
+
+            <input required type="text" class="form-control" aria-describedby="clientStreet"
+                placeholder="Logradouro *" formControlName="street"/>
+
+            <input required required type="number" class="form-control" aria-describedby="clientsHouseNumber"
+                placeholder="Número *" formControlName="number"/>
+
+            <input required type="text" class="form-control" aria-describedby="clientsDistrict"
+                placeholder="Bairro *" formControlName="district" />
+                
+            <input required type="text" class="form-control" aria-describedby="clientsCity" placeholder="Cidade *"
+                formControlName="city" />
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <button type="submit" class="btn btn-warning">Salvar</button>
+            <button type="button" class="btn btn-danger" routerLink="/client-register">Cancelar</button>
+        </div>
+    </div>
+</form>

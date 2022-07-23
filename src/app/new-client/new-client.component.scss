@@ -1,0 +1,28 @@
+.card-body{
+    display: inline-flex;
+}
+.card-body *{
+    margin-left: 5px;
+}
+.card-header{
+    background-color: #36658C;
+    color:white;
+}
+.card{
+    margin-bottom: 10px;
+}
+.tableTop{
+    background-color: #36658C;
+    color:white;
+}
+.btn{
+    margin: 5px;
+}
+table{
+    margin: 5px;
+    width: 99%;
+}
+input{
+    max-width: 200px;
+    height: 44px;
+}

@@ -1,0 +1,43 @@
+<form>
+    <div class="card">
+        <div class="card-header">
+            Pesquisar Cliente
+        </div>
+        <div class="card-body">
+            <input type="text" class="form-control" aria-describedby="clientName" placeholder="Nome do Cliente" />
+            <input type="text" class="form-control" mask="000.000.000-00" aria-describedby="clientsCPF"
+                placeholder="CPF" />
+            <input type="text" class="form-control" mask="(00) 00000-0000" aria-describedby="clientsPhone"
+                placeholder="Número do Cliente" />
+            <button type="button" class="btn">
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div>
+            <button type="button" class="btn btn-sm" routerLink="/new-client"><mat-icon>note_add</mat-icon> Novo</button>
+        </div>
+        <table class="table">
+            <thead class="tableTop">
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Endereço</th>
+                    <th scope="col">Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tiago Torres</td>
+                    <td>475.***.***-50</td>
+                    <td>(11) 93211-3455</td>
+                    <td>Rua Morada da Paraíba, 75</td>
+                    <td>apagar</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</form>
